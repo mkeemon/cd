@@ -1,0 +1,379 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		47D452B31590B8ED007B8EB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D452B21590B8ED007B8EB5 /* UIKit.framework */; };
+		47D452B51590B8ED007B8EB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D452B41590B8ED007B8EB5 /* Foundation.framework */; };
+		47D452B71590B8ED007B8EB5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D452B61590B8ED007B8EB5 /* CoreGraphics.framework */; };
+		47D452BD1590B8ED007B8EB5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 47D452BB1590B8ED007B8EB5 /* InfoPlist.strings */; };
+		47D452BF1590B8ED007B8EB5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D452BE1590B8ED007B8EB5 /* main.m */; };
+		47D452C31590B8ED007B8EB5 /* CongressDirectoryAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D452C21590B8ED007B8EB5 /* CongressDirectoryAppDelegate.m */; };
+		47D452C61590B8ED007B8EB5 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D452C41590B8ED007B8EB5 /* MainStoryboard_iPhone.storyboard */; };
+		47D452C91590B8ED007B8EB5 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D452C71590B8ED007B8EB5 /* MainStoryboard_iPad.storyboard */; };
+		47D452CC1590B8ED007B8EB5 /* CongressDirectoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D452CB1590B8ED007B8EB5 /* CongressDirectoryViewController.m */; };
+		47D452E81590BF97007B8EB5 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D452D41590BF97007B8EB5 /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		47D452E91590BF97007B8EB5 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D452D61590BF97007B8EB5 /* AFHTTPRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		47D452EA1590BF97007B8EB5 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D452D81590BF97007B8EB5 /* AFImageRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		47D452EB1590BF97007B8EB5 /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D452DA1590BF97007B8EB5 /* AFJSONRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		47D452EC1590BF97007B8EB5 /* AFJSONUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D452DC1590BF97007B8EB5 /* AFJSONUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		47D452ED1590BF97007B8EB5 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D452DE1590BF97007B8EB5 /* AFNetworkActivityIndicatorManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		47D452EE1590BF97007B8EB5 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D452E11590BF97007B8EB5 /* AFPropertyListRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		47D452EF1590BF97007B8EB5 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D452E31590BF97007B8EB5 /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		47D452F01590BF97007B8EB5 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D452E51590BF97007B8EB5 /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		47D452F11590BF97007B8EB5 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D452E71590BF97007B8EB5 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		47D4530215922423007B8EB5 /* Member.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D4530115922423007B8EB5 /* Member.m */; };
+		47D4535115924756007B8EB5 /* HouseMemberTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D4535015924756007B8EB5 /* HouseMemberTableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		47D452AE1590B8ED007B8EB5 /* CongressApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CongressApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47D452B21590B8ED007B8EB5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		47D452B41590B8ED007B8EB5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		47D452B61590B8ED007B8EB5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		47D452BA1590B8ED007B8EB5 /* CongressApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CongressApp-Info.plist"; sourceTree = "<group>"; };
+		47D452BC1590B8ED007B8EB5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		47D452BE1590B8ED007B8EB5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		47D452C01590B8ED007B8EB5 /* CongressApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CongressApp-Prefix.pch"; sourceTree = "<group>"; };
+		47D452C11590B8ED007B8EB5 /* CongressDirectoryAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CongressDirectoryAppDelegate.h; sourceTree = "<group>"; };
+		47D452C21590B8ED007B8EB5 /* CongressDirectoryAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CongressDirectoryAppDelegate.m; sourceTree = "<group>"; };
+		47D452C51590B8ED007B8EB5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		47D452C81590B8ED007B8EB5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		47D452CA1590B8ED007B8EB5 /* CongressDirectoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CongressDirectoryViewController.h; sourceTree = "<group>"; };
+		47D452CB1590B8ED007B8EB5 /* CongressDirectoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CongressDirectoryViewController.m; sourceTree = "<group>"; };
+		47D452D31590BF97007B8EB5 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		47D452D41590BF97007B8EB5 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		47D452D51590BF97007B8EB5 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		47D452D61590BF97007B8EB5 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		47D452D71590BF97007B8EB5 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		47D452D81590BF97007B8EB5 /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		47D452D91590BF97007B8EB5 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		47D452DA1590BF97007B8EB5 /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		47D452DB1590BF97007B8EB5 /* AFJSONUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONUtilities.h; sourceTree = "<group>"; };
+		47D452DC1590BF97007B8EB5 /* AFJSONUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONUtilities.m; sourceTree = "<group>"; };
+		47D452DD1590BF97007B8EB5 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		47D452DE1590BF97007B8EB5 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		47D452DF1590BF97007B8EB5 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		47D452E01590BF97007B8EB5 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		47D452E11590BF97007B8EB5 /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		47D452E21590BF97007B8EB5 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		47D452E31590BF97007B8EB5 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		47D452E41590BF97007B8EB5 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		47D452E51590BF97007B8EB5 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		47D452E61590BF97007B8EB5 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		47D452E71590BF97007B8EB5 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		47D4530015922423007B8EB5 /* Member.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Member.h; sourceTree = "<group>"; };
+		47D4530115922423007B8EB5 /* Member.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Member.m; sourceTree = "<group>"; };
+		47D4534F15924756007B8EB5 /* HouseMemberTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseMemberTableViewController.h; sourceTree = "<group>"; };
+		47D4535015924756007B8EB5 /* HouseMemberTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseMemberTableViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		47D452AB1590B8ED007B8EB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47D452B31590B8ED007B8EB5 /* UIKit.framework in Frameworks */,
+				47D452B51590B8ED007B8EB5 /* Foundation.framework in Frameworks */,
+				47D452B71590B8ED007B8EB5 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		47D452A31590B8ED007B8EB5 = {
+			isa = PBXGroup;
+			children = (
+				47D452D21590BF97007B8EB5 /* AFNetworking */,
+				47D452B81590B8ED007B8EB5 /* CongressApp */,
+				47D452B11590B8ED007B8EB5 /* Frameworks */,
+				47D452AF1590B8ED007B8EB5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		47D452AF1590B8ED007B8EB5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				47D452AE1590B8ED007B8EB5 /* CongressApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		47D452B11590B8ED007B8EB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47D452B21590B8ED007B8EB5 /* UIKit.framework */,
+				47D452B41590B8ED007B8EB5 /* Foundation.framework */,
+				47D452B61590B8ED007B8EB5 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		47D452B81590B8ED007B8EB5 /* CongressApp */ = {
+			isa = PBXGroup;
+			children = (
+				47D4534F15924756007B8EB5 /* HouseMemberTableViewController.h */,
+				47D4535015924756007B8EB5 /* HouseMemberTableViewController.m */,
+				47D452C11590B8ED007B8EB5 /* CongressDirectoryAppDelegate.h */,
+				47D452C21590B8ED007B8EB5 /* CongressDirectoryAppDelegate.m */,
+				47D452C41590B8ED007B8EB5 /* MainStoryboard_iPhone.storyboard */,
+				47D452C71590B8ED007B8EB5 /* MainStoryboard_iPad.storyboard */,
+				47D452CA1590B8ED007B8EB5 /* CongressDirectoryViewController.h */,
+				47D452CB1590B8ED007B8EB5 /* CongressDirectoryViewController.m */,
+				47D452B91590B8ED007B8EB5 /* Supporting Files */,
+				47D4530015922423007B8EB5 /* Member.h */,
+				47D4530115922423007B8EB5 /* Member.m */,
+			);
+			path = CongressApp;
+			sourceTree = "<group>";
+		};
+		47D452B91590B8ED007B8EB5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				47D452BA1590B8ED007B8EB5 /* CongressApp-Info.plist */,
+				47D452BB1590B8ED007B8EB5 /* InfoPlist.strings */,
+				47D452BE1590B8ED007B8EB5 /* main.m */,
+				47D452C01590B8ED007B8EB5 /* CongressApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		47D452D21590BF97007B8EB5 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				47D452D31590BF97007B8EB5 /* AFHTTPClient.h */,
+				47D452D41590BF97007B8EB5 /* AFHTTPClient.m */,
+				47D452D51590BF97007B8EB5 /* AFHTTPRequestOperation.h */,
+				47D452D61590BF97007B8EB5 /* AFHTTPRequestOperation.m */,
+				47D452D71590BF97007B8EB5 /* AFImageRequestOperation.h */,
+				47D452D81590BF97007B8EB5 /* AFImageRequestOperation.m */,
+				47D452D91590BF97007B8EB5 /* AFJSONRequestOperation.h */,
+				47D452DA1590BF97007B8EB5 /* AFJSONRequestOperation.m */,
+				47D452DB1590BF97007B8EB5 /* AFJSONUtilities.h */,
+				47D452DC1590BF97007B8EB5 /* AFJSONUtilities.m */,
+				47D452DD1590BF97007B8EB5 /* AFNetworkActivityIndicatorManager.h */,
+				47D452DE1590BF97007B8EB5 /* AFNetworkActivityIndicatorManager.m */,
+				47D452DF1590BF97007B8EB5 /* AFNetworking.h */,
+				47D452E01590BF97007B8EB5 /* AFPropertyListRequestOperation.h */,
+				47D452E11590BF97007B8EB5 /* AFPropertyListRequestOperation.m */,
+				47D452E21590BF97007B8EB5 /* AFURLConnectionOperation.h */,
+				47D452E31590BF97007B8EB5 /* AFURLConnectionOperation.m */,
+				47D452E41590BF97007B8EB5 /* AFXMLRequestOperation.h */,
+				47D452E51590BF97007B8EB5 /* AFXMLRequestOperation.m */,
+				47D452E61590BF97007B8EB5 /* UIImageView+AFNetworking.h */,
+				47D452E71590BF97007B8EB5 /* UIImageView+AFNetworking.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		47D452AD1590B8ED007B8EB5 /* CongressApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47D452CF1590B8ED007B8EB5 /* Build configuration list for PBXNativeTarget "CongressApp" */;
+			buildPhases = (
+				47D452AA1590B8ED007B8EB5 /* Sources */,
+				47D452AB1590B8ED007B8EB5 /* Frameworks */,
+				47D452AC1590B8ED007B8EB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CongressApp;
+			productName = CongressApp;
+			productReference = 47D452AE1590B8ED007B8EB5 /* CongressApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		47D452A51590B8ED007B8EB5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CongressDirectory;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 47D452A81590B8ED007B8EB5 /* Build configuration list for PBXProject "CongressApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 47D452A31590B8ED007B8EB5;
+			productRefGroup = 47D452AF1590B8ED007B8EB5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				47D452AD1590B8ED007B8EB5 /* CongressApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		47D452AC1590B8ED007B8EB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47D452BD1590B8ED007B8EB5 /* InfoPlist.strings in Resources */,
+				47D452C61590B8ED007B8EB5 /* MainStoryboard_iPhone.storyboard in Resources */,
+				47D452C91590B8ED007B8EB5 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		47D452AA1590B8ED007B8EB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47D452BF1590B8ED007B8EB5 /* main.m in Sources */,
+				47D452C31590B8ED007B8EB5 /* CongressDirectoryAppDelegate.m in Sources */,
+				47D452CC1590B8ED007B8EB5 /* CongressDirectoryViewController.m in Sources */,
+				47D452E81590BF97007B8EB5 /* AFHTTPClient.m in Sources */,
+				47D452E91590BF97007B8EB5 /* AFHTTPRequestOperation.m in Sources */,
+				47D452EA1590BF97007B8EB5 /* AFImageRequestOperation.m in Sources */,
+				47D452EB1590BF97007B8EB5 /* AFJSONRequestOperation.m in Sources */,
+				47D452EC1590BF97007B8EB5 /* AFJSONUtilities.m in Sources */,
+				47D452ED1590BF97007B8EB5 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				47D452EE1590BF97007B8EB5 /* AFPropertyListRequestOperation.m in Sources */,
+				47D452EF1590BF97007B8EB5 /* AFURLConnectionOperation.m in Sources */,
+				47D452F01590BF97007B8EB5 /* AFXMLRequestOperation.m in Sources */,
+				47D452F11590BF97007B8EB5 /* UIImageView+AFNetworking.m in Sources */,
+				47D4530215922423007B8EB5 /* Member.m in Sources */,
+				47D4535115924756007B8EB5 /* HouseMemberTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		47D452BB1590B8ED007B8EB5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47D452BC1590B8ED007B8EB5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		47D452C41590B8ED007B8EB5 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47D452C51590B8ED007B8EB5 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		47D452C71590B8ED007B8EB5 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47D452C81590B8ED007B8EB5 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		47D452CD1590B8ED007B8EB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		47D452CE1590B8ED007B8EB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		47D452D01590B8ED007B8EB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CongressApp/CongressApp-Prefix.pch";
+				INFOPLIST_FILE = "CongressApp/CongressApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		47D452D11590B8ED007B8EB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CongressApp/CongressApp-Prefix.pch";
+				INFOPLIST_FILE = "CongressApp/CongressApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		47D452A81590B8ED007B8EB5 /* Build configuration list for PBXProject "CongressApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47D452CD1590B8ED007B8EB5 /* Debug */,
+				47D452CE1590B8ED007B8EB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47D452CF1590B8ED007B8EB5 /* Build configuration list for PBXNativeTarget "CongressApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47D452D01590B8ED007B8EB5 /* Debug */,
+				47D452D11590B8ED007B8EB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 47D452A51590B8ED007B8EB5 /* Project object */;
+}
