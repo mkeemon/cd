@@ -8,14 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HouseMemberTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
+@interface MemberTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
     UITableView *_tableView;
     UIActivityIndicatorView *_activityIndicatorView;
-    NSArray *_movies;
+    NSArray *_members;
 }
 
 @property (nonatomic, retain) UITableView *tableView;
 @property (nonatomic, retain) UIActivityIndicatorView *activityIndicatorView;
-@property (nonatomic, retain) NSArray *movies;
+@property (nonatomic, retain) NSArray *members;
+@property (nonatomic, weak) NSString *chamber;
+@property (weak, nonatomic) IBOutlet UINavigationItem *navBar;
+
 
 @end

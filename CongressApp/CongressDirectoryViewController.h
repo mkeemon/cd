@@ -10,5 +10,7 @@
 
 @interface CongressDirectoryViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *response;
+@property (weak, nonatomic) NSString *category;
+@property (weak, nonatomic) IBOutlet UINavigationItem *navBar;
 
 @end

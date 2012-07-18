@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface Member : NSObject
-@property (nonatomic, weak) NSString *first_name;
-@property (nonatomic, weak) NSString *middle_name;
-@property (nonatomic, weak) NSString *last_name;
+@property (nonatomic, weak) NSString *firstName;
+@property (nonatomic, weak) NSString *middleName;
+@property (nonatomic, weak) NSString *lastName;
 @property (nonatomic, weak) NSString *party;
 @property (nonatomic, weak) NSString *url;
-
+@property (nonatomic, weak) NSString *memberID;
 
 @end

@@ -9,9 +9,10 @@
 #import "Member.h"
 
 @implementation Member
-@synthesize first_name = _first_name;
-@synthesize last_name = _last_name;
-@synthesize middle_name = _middle_name;
+@synthesize firstName = _firstName;
+@synthesize lastName = _lastName;
+@synthesize middleName = _middleName;
 @synthesize party = _party;
-
+@synthesize url = _url;
+@synthesize memberID = _memberID;
 @end
