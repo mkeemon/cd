@@ -8,18 +8,29 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MemberProfileViewController : UIViewController
+@interface MemberProfileViewController : UIViewController<UITableViewDataSource>{
+    UITableView *_contactTableView;
+    UIActivityIndicatorView *_activityIndicatorView;
+    NSArray *_memberInfo;
+}
 
-@property (weak, nonatomic) NSString * member_id;
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+
+
+
+@property (weak, nonatomic) NSString *memberID;
 
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *dob;
 @property (weak, nonatomic) IBOutlet UILabel *party;
-@property (weak, nonatomic) IBOutlet UIButton *phoneNumber;
 @property (weak, nonatomic) IBOutlet UIImageView *profileImage;
 
-- (IBAction)callNumber:(UIButton *) sender;
-- (IBAction)EmailAddress;
+
+@property (retain, nonatomic) UIActivityIndicatorView *activityIndicatorView;
+@property (retain, nonatomic) NSArray *memberInfo;
+@property (retain, nonatomic) UITableView *contactTableView;
+
 
 - (id)initWithMemberID:(NSString*)mem_id;
 @end

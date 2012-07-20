@@ -17,6 +17,7 @@
 @property (nonatomic, retain) UITableView *tableView;
 @property (nonatomic, retain) UIActivityIndicatorView *activityIndicatorView;
 @property (nonatomic, retain) NSArray *members;
+
 @property (nonatomic, weak) NSString *chamber;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navBar;
 

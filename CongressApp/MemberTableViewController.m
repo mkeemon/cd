@@ -16,6 +16,10 @@
 @property (nonatomic, strong) NSMutableArray *stateArray;
 @property (nonatomic, strong) NSMutableArray *statesMembers;
 @property (nonatomic, strong) NSMutableArray *fullStateNames;
+@property (nonatomic, strong) UIImageView *grayCellView;
+@property (nonatomic, strong) UIImageView *blueCellView;
+@property (nonatomic, strong) UIImageView *redCellView;
+
 @end
 
 
@@ -31,6 +35,10 @@
 @synthesize statesMembers = _statesMembers;
 @synthesize fullStateNames = _fullStateNames;
 
+@synthesize grayCellView = _grayCellView;
+@synthesize redCellView = _redCellView;
+@synthesize blueCellView = _blueCellView;
+
 
 - (void) getMembersByState{
     
@@ -38,7 +46,6 @@
     
     NSMutableString *uri = [NSMutableString stringWithString: @"http://23.23.139.37/members_by_state.php?chamber="];
     [uri appendString:self.chamber];
-    //NSLog(@"%@", uri);
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:uri]];
     
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
@@ -53,8 +60,10 @@
         //NSLog(@"%@", self.statesMembers);
         
         [self.activityIndicatorView stopAnimating];
+
         [self.tableView setHidden:NO];
-        [self.tableView reloadData];        
+        [self.tableView reloadData];
+    
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"Request Failed with Error: %@, %@", error, error.userInfo);
     }];
@@ -88,15 +97,15 @@
     self.stateArray = [[NSMutableArray alloc] init];
     self.statesMembers = [[NSMutableArray alloc] init];
     self.fullStateNames = [[NSMutableArray alloc] init];
-
+    
     [self initStates];
     [self getMembersByState];
     
     if([self.chamber isEqualToString:@"house"]){
-        self.navBar.title = @"Members: House of Representatives";
+        self.navBar.title = @"House of Representatives";
     }
     else{
-        self.navBar.title = @"Members: Senate";
+        self.navBar.title = @"Senate";
 
     }
     
@@ -163,26 +172,26 @@
     NSArray *members = [self.statesMembers objectAtIndex:indexPath.section];
     NSDictionary *member = [members objectAtIndex:indexPath.row];
     NSString *party = [member objectForKey:@"current_party"];
-    NSLog(@"%@",party);
-    NSLog(@"%@",member);
-    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.backgroundColor = [UIColor clearColor];
 
     if([party isEqualToString:@"D"])
     {
-        cell.backgroundColor = [UIColor blueColor];
-
+        cell.backgroundView =[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"button_blue.jpeg"]];
     }
     else if([party isEqualToString:@"R"])
     {
-        cell.backgroundColor = [UIColor redColor];
-
+       // UIView *backgroundView = [[UIView alloc] initWithFrame: ];
+       cell.backgroundView =[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"button_red.jpeg"]];
+        //cell.imageView.image = [UIImage imageNamed:@"button_red.jpeg"];
+        
 
     }
     else //if([party isEqualToString:@"I"])
     {
-        cell.backgroundColor = [UIColor lightGrayColor];
-
+        cell.backgroundView =[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"button_gray.jpeg"]];
     }
+    cell.textLabel.textColor = [UIColor whiteColor];
+
 }
 
 
@@ -195,7 +204,6 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
     }
-    
     
     //NSString *cellValue = [array objectAtIndex:indexPath.row];
 
@@ -215,7 +223,6 @@
     NSData *imgData = [NSData dataWithContentsOfURL:url];
   
     cell.imageView.image = [self imageWithImage: [UIImage imageWithData:imgData] scaledToSize:CGSizeMake(150,200)];
-   // cell.imageView.image = [UIImage imageWithData:imgData];
 
     cell.textLabel.text = [NSString stringWithFormat:@"%@, %@ %@", l_n, f_n, m_n];
 
@@ -251,7 +258,7 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"MemberProfile"]){
-        [segue.destinationViewController setMember_id:sender];
+        [segue.destinationViewController setMemberID:sender];
     }
     
 }
