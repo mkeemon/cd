@@ -6,7 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
-        <!--Congress Directory View Controller - Category-->
+        <!--Congress Directory View Controller-->
         <scene sceneID="5">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -16,11 +16,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xMX-kV-jfP">
-                                <rect key="frame" x="56" y="275" width="209" height="37"/>
+                                <rect key="frame" x="56" y="235" width="209" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="House of Representatives">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="19"/>
+                                <state key="normal" title="House of Representatives" backgroundImage="button_blue.jpeg">
+                                    <color key="titleColor" red="0.99397590359999999" green="0.98795180719999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -31,12 +31,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0jg-VP-6b4">
-                                <rect key="frame" x="123" y="214" width="74" height="37"/>
+                                <rect key="frame" x="123" y="297" width="74" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Senate">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="19"/>
+                                <state key="normal" title="Senate" backgroundImage="button_red.jpeg">
+                                    <color key="titleColor" red="0.99397590361445787" green="0.98795180722891562" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.43334389631246117" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -52,12 +52,19 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Choose which chamber to browse" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="54Z-in-rUo">
+                                <rect key="frame" x="20" y="197" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Category" id="pR0-0J-D5U"/>
+                    <navigationItem key="navigationItem" id="pR0-0J-D5U"/>
                     <connections>
-                        <outlet property="navBar" destination="pR0-0J-D5U" id="Ep1-k3-yZd"/>
+                        <outlet property="navBar" destination="pR0-0J-D5U" id="cIY-R4-ncO"/>
                         <segue destination="nd4-kZ-iKc" kind="push" identifier="MemberList" id="RNq-oW-xPS"/>
                     </connections>
                 </viewController>
@@ -97,32 +104,25 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="WDO-K6-aly">
-                                        <rect key="frame" x="20" y="20" width="113" height="150"/>
+                                        <rect key="frame" x="8" y="8" width="125" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="b" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="AVi-uZ-l22">
-                                        <rect key="frame" x="141" y="66" width="159" height="21"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="party" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="AVi-uZ-l22">
+                                        <rect key="frame" x="141" y="87" width="159" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="c" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="GZg-BQ-Mbd">
-                                        <rect key="frame" x="141" y="95" width="159" height="21"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" id="jdz-Wr-5Eq">
+                                        <rect key="frame" x="141" y="20" width="159" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="a" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" id="jdz-Wr-5Eq">
-                                        <rect key="frame" x="141" y="28" width="159" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="28"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="MWt-VU-yT4">
-                                        <rect key="frame" x="0.0" y="185" width="320" height="231"/>
+                                        <rect key="frame" x="0.0" y="185" width="320" height="232"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
@@ -130,6 +130,27 @@
                                             <outlet property="delegate" destination="nqK-A0-kTe" id="Zbf-GD-5DC"/>
                                         </connections>
                                     </tableView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="age" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="tdD-hH-zQp">
+                                        <rect key="frame" x="141" y="58" width="159" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="state" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="zLa-jF-PX6">
+                                        <rect key="frame" x="141" y="116" width="159" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="chamber" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" id="x67-go-cZm">
+                                        <rect key="frame" x="141" y="142" width="159" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -137,11 +158,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="BhS-Sy-w7t"/>
                     <connections>
+                        <outlet property="age" destination="tdD-hH-zQp" id="bCI-FU-mSN"/>
+                        <outlet property="chamber" destination="x67-go-cZm" id="h3O-BM-aKe"/>
                         <outlet property="contactTableView" destination="MWt-VU-yT4" id="73h-h9-kqW"/>
-                        <outlet property="dob" destination="GZg-BQ-Mbd" id="i25-0l-tpE"/>
                         <outlet property="name" destination="jdz-Wr-5Eq" id="91H-qs-CO7"/>
+                        <outlet property="navBar" destination="BhS-Sy-w7t" id="nT3-rE-5BL"/>
                         <outlet property="party" destination="AVi-uZ-l22" id="jXI-UQ-axN"/>
                         <outlet property="profileImage" destination="WDO-K6-aly" id="DFs-aL-miK"/>
+                        <outlet property="state" destination="zLa-jF-PX6" id="TOY-fy-fmv"/>
                         <segue destination="Y3y-X7-1b1" kind="push" identifier="WebView" id="ghr-uO-BkS"/>
                     </connections>
                 </viewController>
@@ -166,16 +190,60 @@
                                     <outlet property="delegate" destination="Y3y-X7-1b1" id="c3R-RJ-XfU"/>
                                 </connections>
                             </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" id="xZG-Zh-G8e">
+                                <rect key="frame" x="150" y="198" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="cnt-DY-k5h"/>
                     <connections>
+                        <outlet property="loadingIcon" destination="xZG-Zh-G8e" id="7xe-3N-qDO"/>
                         <outlet property="webView" destination="f06-B3-scg" id="pm7-OT-2Ky"/>
                     </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="2595" y="14"/>
+        </scene>
+        <!--Loading Screen View Controller-->
+        <scene sceneID="nTe-Ua-dtd">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HPd-v1-u1l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="UhD-yE-rRE" customClass="LoadingScreenViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wKH-Z0-r59">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Legislative Branch Directory" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Bmw-Kn-XFm">
+                                <rect key="frame" x="20" y="20" width="280" height="146"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="A complete listing of Congress contact information" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" id="L75-gj-Ckt">
+                                <rect key="frame" x="20" y="166" width="280" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" id="7It-y6-xmJ">
+                                <rect key="frame" x="150" y="252" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="f0M-Y8-MeK"/>
+                    <connections>
+                        <outlet property="loadingView" destination="7It-y6-xmJ" id="SDr-hv-BO3"/>
+                        <segue destination="2" kind="push" identifier="SelectionScreen" id="iSK-Rl-Mjw"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="237" y="-192"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="L8x-sc-cDn">
@@ -183,34 +251,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMP-D5-mMT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="WPG-Zm-Efc" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="2Ob-Y7-9ag"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="dxw-uo-bk6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="rootViewController" id="Ce1-xv-2QY"/>
+                        <segue destination="UhD-yE-rRE" kind="relationship" relationship="rootViewController" id="B1o-Ba-9Qd"/>
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="91" y="192"/>
+            <point key="canvasLocation" x="-233" y="390"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button_blue.jpeg" width="320" height="45"/>
+        <image name="button_red.jpeg" width="320" height="45"/>
+    </resources>
     <classes>
         <class className="CongressDirectoryViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CongressDirectoryViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="navBar" candidateClass="UINavigationItem"/>
-                <relationship kind="outlet" name="response" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="LoadingScreenViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoadingScreenViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="loadingView" candidateClass="UIActivityIndicatorView"/>
             </relationships>
         </class>
         <class className="MemberProfileViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MemberProfileViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="dob" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="age" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="chamber" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="name" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="navBar" candidateClass="UINavigationItem"/>
                 <relationship kind="outlet" name="party" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="profileImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="state" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="MemberTableViewController" superclassName="UIViewController">
@@ -222,6 +303,7 @@
         <class className="WebsiteViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WebsiteViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="loadingIcon" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>

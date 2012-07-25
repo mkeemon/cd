@@ -7,7 +7,6 @@
 //
 
 #import "CongressDirectoryViewController.h"
-#import "Member.h"
 #import "MemberTableViewController.h"
 
 @interface CongressDirectoryViewController ()
@@ -15,7 +14,6 @@
 @end
 
 @implementation CongressDirectoryViewController
-@synthesize response = _response;
 @synthesize chamber = _chamber;
 @synthesize category = _category;
 @synthesize navBar = _navBar;
@@ -40,15 +38,30 @@
         
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+
+}
+
+- (void) viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navBar.hidesBackButton = YES;
     
+    NSLog(@"Loaded");
     
     NSString *title = [self.category stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:[[self.category substringToIndex:1] uppercaseString]];
 
     self.navBar.title = title;
-
+    
     NSLog(@"%@",self.category);
 	// Do any additional setup after loading the view, typically from a nib.
     //[self apiRequest];
@@ -57,7 +70,6 @@
 
 - (void)viewDidUnload
 {
-    [self setResponse:nil];
     [self setNavBar:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.

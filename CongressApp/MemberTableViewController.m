@@ -8,18 +8,13 @@
 
 #import "MemberTableViewController.h"
 #import "AFNetworking.h"
-#import "State.h"
 #import "MemberProfileViewController.h"
-#import "Member.h"
+#import "MemberData.h"
 
 @interface MemberTableViewController ()
 @property (nonatomic, strong) NSMutableArray *stateArray;
 @property (nonatomic, strong) NSMutableArray *statesMembers;
 @property (nonatomic, strong) NSMutableArray *fullStateNames;
-@property (nonatomic, strong) UIImageView *grayCellView;
-@property (nonatomic, strong) UIImageView *blueCellView;
-@property (nonatomic, strong) UIImageView *redCellView;
-
 @end
 
 
@@ -35,41 +30,19 @@
 @synthesize statesMembers = _statesMembers;
 @synthesize fullStateNames = _fullStateNames;
 
-@synthesize grayCellView = _grayCellView;
-@synthesize redCellView = _redCellView;
-@synthesize blueCellView = _blueCellView;
 
 
 - (void) getMembersByState{
-    
-    
-    
-    NSMutableString *uri = [NSMutableString stringWithString: @"http://23.23.139.37/members_by_state.php?chamber="];
-    [uri appendString:self.chamber];
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:uri]];
-    
-    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+    MemberData *data = [MemberData sharedInformation];
+    self.members = [data returnMemberDataForChamber:self.chamber];
+    for(NSString *state in self.stateArray) {
         
-        self.members = [JSON valueForKey:@"data"];
-        for(NSString *state in self.stateArray) {
-            
-            NSArray *members = [self.members valueForKey:state];
-            [self.statesMembers addObject:members];
-        }
-        
-        //NSLog(@"%@", self.statesMembers);
-        
-        [self.activityIndicatorView stopAnimating];
-
-        [self.tableView setHidden:NO];
-        [self.tableView reloadData];
-    
-    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        NSLog(@"Request Failed with Error: %@, %@", error, error.userInfo);
-    }];
-    
-    [operation start];
-    
+        NSArray *members = [self.members valueForKey:state];
+        [self.statesMembers addObject:members];
+    }
+    [self.activityIndicatorView stopAnimating];
+    [self.tableView setHidden:NO];
+    [self.tableView reloadData];
 }
 
 
@@ -173,23 +146,23 @@
     NSDictionary *member = [members objectAtIndex:indexPath.row];
     NSString *party = [member objectForKey:@"current_party"];
     cell.backgroundColor = [UIColor clearColor];
-
+    //[cell.textLabel setFont: [UIFont fontWithName:@"Bodoni 72 Smallcaps" size: 33]];
     if([party isEqualToString:@"D"])
     {
         cell.backgroundView =[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"button_blue.jpeg"]];
+
     }
     else if([party isEqualToString:@"R"])
     {
-       // UIView *backgroundView = [[UIView alloc] initWithFrame: ];
        cell.backgroundView =[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"button_red.jpeg"]];
-        //cell.imageView.image = [UIImage imageNamed:@"button_red.jpeg"];
-        
 
     }
     else //if([party isEqualToString:@"I"])
     {
         cell.backgroundView =[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"button_gray.jpeg"]];
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
     cell.textLabel.textColor = [UIColor whiteColor];
 
 }
@@ -217,12 +190,12 @@
     
     
     
-    NSString *img = [member valueForKey:@"img_url_small"];
-    NSURL *url = [NSURL URLWithString:img];
+    //NSString *img = [member valueForKey:@"img_url_small"];
+    //NSURL *url = [NSURL URLWithString:img];
     
-    NSData *imgData = [NSData dataWithContentsOfURL:url];
+    //NSData *imgData = [NSData dataWithContentsOfURL:url];
   
-    cell.imageView.image = [self imageWithImage: [UIImage imageWithData:imgData] scaledToSize:CGSizeMake(150,200)];
+   // cell.imageView.image = [UIImage imageWithData:imgData];//[self imageWithImage: [UIImage imageWithData:imgData] scaledToSize:CGSizeMake(150,200)];
 
     cell.textLabel.text = [NSString stringWithFormat:@"%@, %@ %@", l_n, f_n, m_n];
 
@@ -246,19 +219,30 @@
 {    
     NSArray *members = [self.statesMembers objectAtIndex:indexPath.section];
     NSDictionary *member = [members objectAtIndex:indexPath.row];
-    NSString *memberID = [member valueForKey:@"id"];
-    [self segueToMemberProfile: memberID];
+    //cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
+    [tableView cellForRowAtIndexPath:indexPath].selectionStyle = UITableViewCellSelectionStyleNone;
+    [self segueToMemberProfile: member];
 }
 
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView 
+{
+    return self.stateArray;
+}
 
-- (void) segueToMemberProfile:(NSString *) memberID{
-    [self performSegueWithIdentifier:@"MemberProfile" sender:memberID];
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index 
+{
+    return index;
+}
+
+- (void) segueToMemberProfile:(NSDictionary *) member{
+    [self performSegueWithIdentifier:@"MemberProfile" sender:member];
 }
 
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"MemberProfile"]){
-        [segue.destinationViewController setMemberID:sender];
+        [segue.destinationViewController setMember:sender];
     }
     
 }

@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		4711E01915B75EAA005C463B /* WebsiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4711E01815B75EA9005C463B /* WebsiteViewController.m */; };
 		47408EE415927D61005833C8 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47408EE315927D61005833C8 /* CategoryViewController.m */; };
+		4758705C15B9E803005E9C02 /* LoadingScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4758705B15B9E803005E9C02 /* LoadingScreenViewController.m */; };
+		4758705F15BC6E53005E9C02 /* MemberData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4758705E15BC6E53005E9C02 /* MemberData.m */; };
 		478CDE4315A0FE3F00BFD903 /* PhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 478CDE4215A0FE3F00BFD903 /* PhoneNumberFormatter.m */; };
-		47B7829D159B5074009EE761 /* State.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B7829C159B5074009EE761 /* State.m */; };
 		47C6244E15941B1E009A5690 /* MemberProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C6244D15941B1E009A5690 /* MemberProfileViewController.m */; };
 		47D452B31590B8ED007B8EB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D452B21590B8ED007B8EB5 /* UIKit.framework */; };
 		47D452B51590B8ED007B8EB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D452B41590B8ED007B8EB5 /* Foundation.framework */; };
@@ -31,7 +32,6 @@
 		47D452EF1590BF97007B8EB5 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D452E31590BF97007B8EB5 /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		47D452F01590BF97007B8EB5 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D452E51590BF97007B8EB5 /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		47D452F11590BF97007B8EB5 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D452E71590BF97007B8EB5 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		47D4530215922423007B8EB5 /* Member.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D4530115922423007B8EB5 /* Member.m */; };
 		47D4535115924756007B8EB5 /* MemberTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D4535015924756007B8EB5 /* MemberTableViewController.m */; };
 		47FD9C9F15B9B73700E7F3B2 /* button_red.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 47FD9C9C15B9B73700E7F3B2 /* button_red.jpeg */; };
 		47FD9CA015B9B73700E7F3B2 /* button_gray.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 47FD9C9D15B9B73700E7F3B2 /* button_gray.jpeg */; };
@@ -43,10 +43,12 @@
 		4711E01815B75EA9005C463B /* WebsiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebsiteViewController.m; sourceTree = "<group>"; };
 		47408EE215927D61005833C8 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
 		47408EE315927D61005833C8 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
+		4758705A15B9E803005E9C02 /* LoadingScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingScreenViewController.h; sourceTree = "<group>"; };
+		4758705B15B9E803005E9C02 /* LoadingScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingScreenViewController.m; sourceTree = "<group>"; };
+		4758705D15BC6E52005E9C02 /* MemberData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberData.h; sourceTree = "<group>"; };
+		4758705E15BC6E53005E9C02 /* MemberData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberData.m; sourceTree = "<group>"; };
 		478CDE4115A0FE3F00BFD903 /* PhoneNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneNumberFormatter.h; sourceTree = "<group>"; };
 		478CDE4215A0FE3F00BFD903 /* PhoneNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneNumberFormatter.m; sourceTree = "<group>"; };
-		47B7829B159B5074009EE761 /* State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = State.h; sourceTree = "<group>"; };
-		47B7829C159B5074009EE761 /* State.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = State.m; sourceTree = "<group>"; };
 		47C6244C15941B1E009A5690 /* MemberProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberProfileViewController.h; sourceTree = "<group>"; };
 		47C6244D15941B1E009A5690 /* MemberProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberProfileViewController.m; sourceTree = "<group>"; };
 		47D452AE1590B8ED007B8EB5 /* CongressApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CongressApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,8 +86,6 @@
 		47D452E51590BF97007B8EB5 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		47D452E61590BF97007B8EB5 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		47D452E71590BF97007B8EB5 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		47D4530015922423007B8EB5 /* Member.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Member.h; sourceTree = "<group>"; };
-		47D4530115922423007B8EB5 /* Member.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Member.m; sourceTree = "<group>"; };
 		47D4534F15924756007B8EB5 /* MemberTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberTableViewController.h; sourceTree = "<group>"; };
 		47D4535015924756007B8EB5 /* MemberTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberTableViewController.m; sourceTree = "<group>"; };
 		47FD9C9C15B9B73700E7F3B2 /* button_red.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = button_red.jpeg; sourceTree = "<group>"; };
@@ -147,10 +147,10 @@
 				478CDE4215A0FE3F00BFD903 /* PhoneNumberFormatter.m */,
 				47D4534F15924756007B8EB5 /* MemberTableViewController.h */,
 				47D4535015924756007B8EB5 /* MemberTableViewController.m */,
-				47B7829B159B5074009EE761 /* State.h */,
-				47B7829C159B5074009EE761 /* State.m */,
 				47C6244C15941B1E009A5690 /* MemberProfileViewController.h */,
 				47C6244D15941B1E009A5690 /* MemberProfileViewController.m */,
+				4758705D15BC6E52005E9C02 /* MemberData.h */,
+				4758705E15BC6E53005E9C02 /* MemberData.m */,
 				47D452C11590B8ED007B8EB5 /* CongressDirectoryAppDelegate.h */,
 				47D452C21590B8ED007B8EB5 /* CongressDirectoryAppDelegate.m */,
 				4711E01715B75EA9005C463B /* WebsiteViewController.h */,
@@ -159,10 +159,10 @@
 				47D452C71590B8ED007B8EB5 /* MainStoryboard_iPad.storyboard */,
 				47D452CA1590B8ED007B8EB5 /* CongressDirectoryViewController.h */,
 				47D452CB1590B8ED007B8EB5 /* CongressDirectoryViewController.m */,
-				47D4530015922423007B8EB5 /* Member.h */,
-				47D4530115922423007B8EB5 /* Member.m */,
 				47408EE215927D61005833C8 /* CategoryViewController.h */,
 				47408EE315927D61005833C8 /* CategoryViewController.m */,
+				4758705A15B9E803005E9C02 /* LoadingScreenViewController.h */,
+				4758705B15B9E803005E9C02 /* LoadingScreenViewController.m */,
 			);
 			path = CongressApp;
 			sourceTree = "<group>";
@@ -293,13 +293,13 @@
 				47D452EF1590BF97007B8EB5 /* AFURLConnectionOperation.m in Sources */,
 				47D452F01590BF97007B8EB5 /* AFXMLRequestOperation.m in Sources */,
 				47D452F11590BF97007B8EB5 /* UIImageView+AFNetworking.m in Sources */,
-				47D4530215922423007B8EB5 /* Member.m in Sources */,
 				47D4535115924756007B8EB5 /* MemberTableViewController.m in Sources */,
 				47408EE415927D61005833C8 /* CategoryViewController.m in Sources */,
 				47C6244E15941B1E009A5690 /* MemberProfileViewController.m in Sources */,
-				47B7829D159B5074009EE761 /* State.m in Sources */,
 				478CDE4315A0FE3F00BFD903 /* PhoneNumberFormatter.m in Sources */,
 				4711E01915B75EAA005C463B /* WebsiteViewController.m in Sources */,
+				4758705C15B9E803005E9C02 /* LoadingScreenViewController.m in Sources */,
+				4758705F15BC6E53005E9C02 /* MemberData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

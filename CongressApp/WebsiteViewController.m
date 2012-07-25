@@ -15,6 +15,7 @@
 @implementation WebsiteViewController
 @synthesize url = _url;
 @synthesize webView = _webView;
+@synthesize loadingIcon = _loadingIcon;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,14 +29,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    [self.loadingIcon startAnimating];
+
 	// Do any additional setup after loading the view.
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:self.url];
-    [self.webView loadRequest:requestObj]; 
+    [self.webView loadRequest:requestObj];
+    
+    [self.loadingIcon setHidesWhenStopped:YES];
+    [self.loadingIcon stopAnimating];
+
 }
 
 - (void)viewDidUnload
 {
     [self setWebView:nil];
+    [self setLoadingIcon:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

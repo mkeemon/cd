@@ -18,14 +18,16 @@
 
 @implementation MemberProfileViewController
 @synthesize name = _name;
-@synthesize dob = _dob;
 @synthesize party = _party;
 @synthesize profileImage;
-@synthesize memberID = _memberID;
+@synthesize age = _age;
+@synthesize state = _state;
+@synthesize chamber = _chamber;
+@synthesize navBar = _navBar;
+@synthesize member = __member;
 @synthesize contactCategories = _contactCategories;
 
 @synthesize activityIndicatorView = _activityIndicatorView;
-@synthesize memberInfo = _memberInfo;
 @synthesize contactTableView = _contactTableView;
 
 
@@ -41,13 +43,13 @@
 
 
 
-- (id)initWithMemberID:(NSString*)mem_id
+- (id)initWithMemberID:(NSDictionary*)member
 {
     self = [super init];
     if (self) 
     {
         // Custom initialization
-        [self setMemberID:mem_id];
+        [self setMember:member];
         
     }
     return self;
@@ -66,7 +68,7 @@
 
 - (IBAction)EmailAddress {
     
-    NSURL *emailURL = [NSURL URLWithString:[self.memberInfo valueForKey:@"email"]];
+    NSURL *emailURL = [NSURL URLWithString:[self.member valueForKey:@"email"]];
     [[UIApplication sharedApplication] openURL:emailURL];
 }
 
@@ -76,11 +78,37 @@
 	// Do any additional setup after loading the view.
     //NSLog(@"%@", self.memberID);
     self.contactCategories = [[NSMutableArray alloc]initWithObjects: @"phone", @"url",@"email_link",@"twitter_id",@"youtube_id", nil ];
-
-    [self getMemberInfo];
+    self.contactTableView.separatorColor = [UIColor clearColor];
+    [self getMember];
+    self.contactTableView.scrollEnabled = NO;
 }
 
-- (void) getMemberInfo{
+- (void) getMember{
+    
+    NSMutableArray *nullCategories = [[NSMutableArray alloc]init];
+
+    for(NSString *category in self.contactCategories)
+    {
+        NSString *info = [self.member valueForKey:category];
+        //NSLog(@"%@ %@", category, info);
+        
+        if([info isEqualToString:@""] || [info isEqualToString:@"0"])
+        {
+            //NSLog([NSString stringWithFormat:@"%@", self.member]);
+            [nullCategories addObject:category];
+        }
+    }
+    for(NSString *category in nullCategories)
+    {
+        [self.contactCategories removeObject:category];
+    }
+    [self.activityIndicatorView stopAnimating];
+    [self.contactTableView setHidden:NO];
+    [self.contactTableView reloadData]; 
+    
+    [self setViewValues];
+    
+    /*
     NSString * strURL = [NSString stringWithFormat:@"http://23.23.139.37/get_member_by_id?id=%@", self.memberID];
     //NSLog(@"%@", strURL);
     
@@ -88,18 +116,18 @@
     
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         
-        self.memberInfo = [JSON valueForKey:@"data"];
-        //NSLog(@"%@", self.memberInfo);
+        self.member = [JSON valueForKey:@"data"];
+        //NSLog(@"%@", self.member);
         NSMutableArray *nullCategories = [[NSMutableArray alloc]init];
         
         for(NSString *category in self.contactCategories)
         {
-            NSString *info = [self.memberInfo valueForKey:category];
+            NSString *info = [self.member valueForKey:category];
             //NSLog(@"%@ %@", category, info);
 
             if([info isEqualToString:@""] || [info isEqualToString:@"0"])
             {
-                //NSLog([NSString stringWithFormat:@"%@", self.memberInfo]);
+                //NSLog([NSString stringWithFormat:@"%@", self.member]);
                 [nullCategories addObject:category];
             }
         }
@@ -107,7 +135,6 @@
         {
             [self.contactCategories removeObject:category];
         }
-        self.contactTableView.separatorColor = [UIColor clearColor];
         [self.activityIndicatorView stopAnimating];
         [self.contactTableView setHidden:NO];
         [self.contactTableView reloadData]; 
@@ -118,22 +145,26 @@
     }];
     
     [operation start];
+     */
 }
 
 - (void) setViewValues{
     
     //name -- ADD MIDDLE NAME IN THERE
-    NSString *fn = [NSString stringWithFormat:@"%@", [self.memberInfo valueForKey:@"first_name"]];
-    NSString *mn = [NSString stringWithFormat:@"%@", [self.memberInfo valueForKey:@"middle_name"]];
-    NSString *ln = [NSString stringWithFormat:@"%@", [self.memberInfo valueForKey:@"last_name"]];
+    NSString *fn = [NSString stringWithFormat:@"%@", [self.member valueForKey:@"first_name"]];
+    NSString *mn = [NSString stringWithFormat:@"%@", [self.member valueForKey:@"middle_name"]];
+    NSString *ln = [NSString stringWithFormat:@"%@", [self.member valueForKey:@"last_name"]];
     [self.name setText:[NSString stringWithFormat:@"%@, %@ %@", ln, fn, mn]];
     
-    //dob
-    NSString *dob = [NSString stringWithFormat:@"%@", [self.memberInfo valueForKey:@"date_of_birth"]];
-    [self.dob setText:[NSString stringWithFormat:@"DOB: %@", dob]];
+    [self.navBar setTitle:[NSString stringWithFormat:@"%@, %@ %@", ln, fn, mn]];
+
+
+    //age
+    NSString *age = [NSString stringWithFormat:@"%@", [self.member valueForKey:@"age"]];
+    [self.age setText:[NSString stringWithFormat:@"Age: %@", age]];
     
     //party
-    NSString *party = [NSString stringWithFormat:@"%@", [self.memberInfo valueForKey:@"current_party"]];
+    NSString *party = [NSString stringWithFormat:@"%@", [self.member valueForKey:@"current_party"]];
     NSString *partyFull = @"";
     if([party isEqualToString:@"R"])
     {
@@ -149,8 +180,25 @@
     }
     [self.party setText:[NSString stringWithFormat:@"Party: %@", partyFull]];
     
+    //chamber
+    NSString *chamberStr = @"";
+    if([[self.member valueForKey:@"chamber"] isEqualToString:@"house"])
+    {
+        chamberStr = @"House of Representatives";
+    }
+    else 
+    {
+        chamberStr = @"Senate";
+    }
+    
+    [self.chamber setText:[NSString stringWithFormat:@"Chamber: %@", chamberStr]];
+    [self.chamber sizeToFit];
+
+    //state
+    [self.state setText:[NSString stringWithFormat:@"State: %@", [self.member valueForKey:@"state"]]];
+    
     //Profile Image
-    NSString *img = [NSString stringWithFormat:[self.memberInfo valueForKey:@"img_url_large"]];
+    NSString *img = [NSString stringWithFormat:[self.member valueForKey:@"img_url_large"]];
     
     NSURL *url = [NSURL URLWithString:img];
     NSData *imgData = [NSData dataWithContentsOfURL:url];
@@ -182,6 +230,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
     }
     
+
     
     //NSString *cellValue = [array objectAtIndex:indexPath.row];
 
@@ -197,29 +246,29 @@
     NSString *category = [self.contactCategories objectAtIndex:index];
     if([category isEqualToString:@"phone"])
     {
-        NSString *number = [self.memberInfo valueForKey:@"phone"];
+        NSString *number = [self.member valueForKey:@"phone"];
         PhoneNumberFormatter *p = [[PhoneNumberFormatter alloc]init];
         NSString *formattedNumber = [p format:number withLocale:@"us"];
         
-        return [NSString stringWithFormat:@"Call Office: %@", formattedNumber];
+        return [NSString stringWithFormat:@"Office Phone: %@", formattedNumber];
     }
     else if([category isEqualToString:@"url"])
     {
-        return [NSString stringWithFormat:@"Visit Web Page"];
+        return [NSString stringWithFormat:@"Web Page"];
     }
     else if([category isEqualToString:@"youtube_id"])
     {
-        return [NSString stringWithFormat:@"Visit YouTube Page"];
+        return [NSString stringWithFormat:@"YouTube Page"];
 
     }
     else if([category isEqualToString:@"twitter_id"])
     {
-        return [NSString stringWithFormat:@"View Twitter Profile"];
+        return [NSString stringWithFormat:@"Twitter Profile"];
 
     }
     else if([category isEqualToString:@"email_link"])
     {
-        return [NSString stringWithFormat:@"Email"];
+        return [NSString stringWithFormat:@"Contact Form"];
 
     }
     else 
@@ -231,10 +280,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {    
     NSString *category = [self.contactCategories objectAtIndex:indexPath.row];
-    NSString *value = [self.memberInfo valueForKey:category];
+    NSString *value = [self.member valueForKey:category];
     if([category isEqualToString:@"phone"])
     {
-        NSURL *url = [NSURL URLWithString:value];
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"tel://%@", value]];
         [[UIApplication sharedApplication] openURL:url];
     }
     else{
@@ -274,6 +323,12 @@
 - (void)viewDidUnload
 {
     [self setContactTableView:nil];
+    [self setAge:nil];
+    [self setAge:nil];
+    [self setAge:nil];
+    [self setState:nil];
+    [self setChamber:nil];
+    [self setNavBar:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

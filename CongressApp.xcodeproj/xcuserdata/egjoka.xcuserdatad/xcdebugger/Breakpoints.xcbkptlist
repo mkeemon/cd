@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CongressApp/CongressDirectoryViewController.m"
-         timestampString = "362027320.072198"
+         timestampString = "364677309.32245"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "54"
-         endingLineNumber = "54"
+         startingLineNumber = "67"
+         endingLineNumber = "67"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CongressApp/MemberTableViewController.m"
-         timestampString = "364502356.704381"
+         timestampString = "364672686.579448"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "99"
-         endingLineNumber = "99"
+         startingLineNumber = "72"
+         endingLineNumber = "72"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CongressApp/MemberTableViewController.m"
-         timestampString = "364502356.704381"
+         timestampString = "364674155.494232"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "213"
-         endingLineNumber = "213"
+         startingLineNumber = "186"
+         endingLineNumber = "186"
          landmarkName = "-tableView:cellForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -59,25 +59,12 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "CongressApp/MemberTableViewController.m"
-         timestampString = "364493816.483914"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "45"
-         endingLineNumber = "45"
-         landmarkName = "-getMembersByState"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "CongressApp/MemberProfileViewController.m"
-         timestampString = "364339241.262956"
+         timestampString = "364679653.60134"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "140"
-         endingLineNumber = "140"
+         startingLineNumber = "171"
+         endingLineNumber = "171"
          landmarkName = "-setViewValues"
          landmarkType = "5">
       </FileBreakpoint>
@@ -86,11 +73,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CongressApp/MemberTableViewController.m"
-         timestampString = "364502356.704381"
+         timestampString = "364672686.579448"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "144"
-         endingLineNumber = "144"
+         startingLineNumber = "117"
+         endingLineNumber = "117"
          landmarkName = "-initStates"
          landmarkType = "5">
       </FileBreakpoint>
@@ -99,11 +86,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CongressApp/MemberProfileViewController.h"
-         timestampString = "364339241.262956"
+         timestampString = "364678753.830763"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "36"
-         endingLineNumber = "36"
+         startingLineNumber = "38"
+         endingLineNumber = "38"
          landmarkName = "@interface MemberProfileViewController"
          landmarkType = "2">
       </FileBreakpoint>
@@ -112,11 +99,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "CongressApp/MemberProfileViewController.m"
-         timestampString = "364339241.262956"
+         timestampString = "364679653.60134"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "174"
-         endingLineNumber = "174"
+         startingLineNumber = "222"
+         endingLineNumber = "222"
          landmarkName = "-tableView:numberOfRowsInSection:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -124,14 +111,14 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "CongressApp/MemberProfileViewController.m"
-         timestampString = "364339241.262956"
+         filePath = "CongressApp/LoadingScreenViewController.m"
+         timestampString = "364671091.827482"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "100"
-         endingLineNumber = "100"
-         landmarkName = "-getMemberInfo"
-         landmarkType = "5">
+         startingLineNumber = "19"
+         endingLineNumber = "19"
+         landmarkName = "@implementation LoadingScreenViewController"
+         landmarkType = "3">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
