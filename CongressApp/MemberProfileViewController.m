@@ -199,10 +199,10 @@
     
     //Profile Image
     NSString *img = [NSString stringWithFormat:[self.member valueForKey:@"img_url_large"]];
-    
-    NSURL *url = [NSURL URLWithString:img];
+    NSString *encodedImg = [img stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSURL *url = [NSURL URLWithString:encodedImg];
     NSData *imgData = [NSData dataWithContentsOfURL:url];
-    
+
     self.profileImage.image = [UIImage imageWithData:imgData];
     
     
