@@ -11,17 +11,16 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
                 <viewController id="2" customClass="CongressDirectoryViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xMX-kV-jfP">
-                                <rect key="frame" x="56" y="235" width="209" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="56" y="231" width="209" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="19"/>
                                 <state key="normal" title="House of Representatives" backgroundImage="button_blue.jpeg">
                                     <color key="titleColor" red="0.99397590359999999" green="0.98795180719999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -30,10 +29,11 @@
                                     <action selector="house:" destination="2" eventType="touchUpInside" id="T8M-An-ySc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0jg-VP-6b4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" id="0jg-VP-6b4">
                                 <rect key="frame" x="123" y="297" width="74" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="19"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Senate" backgroundImage="button_red.jpeg">
                                     <color key="titleColor" red="0.99397590361445787" green="0.98795180722891562" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.43334389631246117" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -46,15 +46,15 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Legislative Branch Directory" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Swf-hB-GTU">
-                                <rect key="frame" x="20" y="20" width="280" height="146"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="20" y="19" width="280" height="146"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="21"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Choose which chamber to browse" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="54Z-in-rUo">
-                                <rect key="frame" x="20" y="197" width="280" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="20" y="173" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -82,6 +82,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="List" id="gwQ-rd-PXk"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="navBar" destination="gwQ-rd-PXk" id="QK1-ma-InD"/>
                         <segue destination="nqK-A0-kTe" kind="push" identifier="MemberProfile" id="nEc-LA-KK0"/>
@@ -122,7 +123,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="MWt-VU-yT4">
-                                        <rect key="frame" x="0.0" y="185" width="320" height="232"/>
+                                        <rect key="frame" x="0.0" y="184" width="320" height="232"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
@@ -165,6 +166,7 @@
                         <outlet property="navBar" destination="BhS-Sy-w7t" id="nT3-rE-5BL"/>
                         <outlet property="party" destination="AVi-uZ-l22" id="jXI-UQ-axN"/>
                         <outlet property="profileImage" destination="WDO-K6-aly" id="DFs-aL-miK"/>
+                        <outlet property="scrollView" destination="16v-eS-EtS" id="vzU-yM-e9d"/>
                         <outlet property="state" destination="zLa-jF-PX6" id="TOY-fy-fmv"/>
                         <segue destination="Y3y-X7-1b1" kind="push" identifier="WebView" id="ghr-uO-BkS"/>
                     </connections>
@@ -180,28 +182,9 @@
                     <view key="view" contentMode="scaleToFill" id="oWM-Xr-Izu">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <webView multipleTouchEnabled="YES" contentMode="scaleToFill" scalesPageToFit="YES" id="f06-B3-scg">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="Y3y-X7-1b1" id="c3R-RJ-XfU"/>
-                                </connections>
-                            </webView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" id="xZG-Zh-G8e">
-                                <rect key="frame" x="150" y="198" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="cnt-DY-k5h"/>
-                    <connections>
-                        <outlet property="loadingIcon" destination="xZG-Zh-G8e" id="7xe-3N-qDO"/>
-                        <outlet property="webView" destination="f06-B3-scg" id="pm7-OT-2Ky"/>
-                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="2595" y="14"/>
@@ -291,6 +274,7 @@
                 <relationship kind="outlet" name="navBar" candidateClass="UINavigationItem"/>
                 <relationship kind="outlet" name="party" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="profileImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="state" candidateClass="UILabel"/>
             </relationships>
         </class>
@@ -302,10 +286,6 @@
         </class>
         <class className="WebsiteViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WebsiteViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="loadingIcon" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

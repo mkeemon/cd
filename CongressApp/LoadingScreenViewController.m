@@ -48,6 +48,7 @@
 {
     [super viewDidLoad];
     [self.loadingView startAnimating];
+    
 	// Do any additional setup after loading the view
     self.data = [MemberData sharedInformation];
     

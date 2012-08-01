@@ -10,6 +10,7 @@
 #import "AFNetworking.h"
 #import "MemberProfileViewController.h"
 #import "MemberData.h"
+#import "UIImage+ProportionalFill.h"
 
 @interface MemberTableViewController ()
 @property (nonatomic, strong) NSMutableArray *stateArray;
@@ -150,20 +151,30 @@
     if([party isEqualToString:@"D"])
     {
         cell.backgroundView =[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"button_blue.jpeg"]];
+        //cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"button_red.jpeg"]];
+
 
     }
     else if([party isEqualToString:@"R"])
     {
        cell.backgroundView =[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"button_red.jpeg"]];
 
+
     }
     else //if([party isEqualToString:@"I"])
     {
         cell.backgroundView =[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"button_gray.jpeg"]];
     }
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
+    
+    UIColor *c = [UIColor colorWithRed:.1 green:.1 blue:.1 alpha:.3];
+   
+    cell.selectedBackgroundView = [[UIImageView alloc]init];
+    cell.selectedBackgroundView.backgroundColor = c;
+    
     cell.textLabel.textColor = [UIColor whiteColor];
+   
+    
 
 }
 
@@ -190,17 +201,31 @@
     
     
     
-    //NSString *img = [member valueForKey:@"img_url_small"];
-    //NSURL *url = [NSURL URLWithString:img];
+    
+    //NSURL *url = [NSURL URLWithString:[member valueForKey:@"img_url_small"]];
     
     //NSData *imgData = [NSData dataWithContentsOfURL:url];
-  
-   // cell.imageView.image = [UIImage imageWithData:imgData];//[self imageWithImage: [UIImage imageWithData:imgData] scaledToSize:CGSizeMake(150,200)];
-
+    NSString *party = [member objectForKey:@"current_party"];
+    NSString *placeholderImg = @"";
+    if([party isEqualToString:@"D"])
+    {
+        placeholderImg = @"democrat_logo.jpeg";
+        
+    }
+    else if([party isEqualToString:@"R"])
+    {
+        placeholderImg = @"republican_logo.png";
+    }
+    else //if([party isEqualToString:@"i"])
+    {
+        placeholderImg = @"independent_logo.png";
+    }
+    
+    
+    [cell.imageView setImageWithURL:[NSURL URLWithString:[member valueForKey:@"img_url_small"]] placeholderImage:[UIImage imageNamed:placeholderImg] size:CGSizeMake(39, 50)];
+    
     cell.textLabel.text = [NSString stringWithFormat:@"%@, %@ %@", l_n, f_n, m_n];
 
-    
-    
     return cell;
 }
 
@@ -217,6 +242,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {    
+    [self.activityIndicatorView startAnimating];
+
     NSArray *members = [self.statesMembers objectAtIndex:indexPath.section];
     NSDictionary *member = [members objectAtIndex:indexPath.row];
     //cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -243,6 +270,8 @@
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"MemberProfile"]){
         [segue.destinationViewController setMember:sender];
+        [self.activityIndicatorView stopAnimating];
+
     }
     
 }
@@ -252,6 +281,7 @@
 
 - (void)viewDidUnload
 {
+
     [self setNavBar:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.

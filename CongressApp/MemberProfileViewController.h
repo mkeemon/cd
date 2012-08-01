@@ -33,6 +33,7 @@
 @property (retain, nonatomic) UIActivityIndicatorView *activityIndicatorView;
 @property (retain, nonatomic) UITableView *contactTableView;
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 - (id)initWithMemberID:(NSString*)mem_id;
 @end

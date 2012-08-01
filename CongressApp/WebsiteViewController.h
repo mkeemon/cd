@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WebsiteViewController : UIViewController
+@interface WebsiteViewController : UIViewController <UIWebViewDelegate>
+{
+	UIWebView *webView;
+	UIActivityIndicatorView *activityIndicator;	
+}
 @property (nonatomic, weak) NSURL *url;
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingIcon;
+
 @end

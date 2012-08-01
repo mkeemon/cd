@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		4711E01915B75EAA005C463B /* WebsiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4711E01815B75EA9005C463B /* WebsiteViewController.m */; };
+		473EC35B15C99E240035A8F6 /* noimage.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 473EC35A15C99E240035A8F6 /* noimage.jpeg */; };
+		473EC36415C9A0D10035A8F6 /* MGImageUtilitiesAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 473EC35F15C9A0D10035A8F6 /* MGImageUtilitiesAppDelegate.m */; };
+		473EC36515C9A0D10035A8F6 /* UIImage+ProportionalFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 473EC36115C9A0D10035A8F6 /* UIImage+ProportionalFill.m */; };
+		473EC36615C9A0D10035A8F6 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 473EC36315C9A0D10035A8F6 /* UIImage+Tint.m */; };
+		473EC36815C9AAD60035A8F6 /* noimage2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 473EC36715C9AAD60035A8F6 /* noimage2.jpg */; };
+		473EC36C15C9B3850035A8F6 /* independent_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 473EC36915C9B3840035A8F6 /* independent_logo.png */; };
+		473EC36D15C9B3850035A8F6 /* republican_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 473EC36A15C9B3840035A8F6 /* republican_logo.png */; };
+		473EC36E15C9B3850035A8F6 /* democrat_logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 473EC36B15C9B3850035A8F6 /* democrat_logo.jpeg */; };
 		47408EE415927D61005833C8 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47408EE315927D61005833C8 /* CategoryViewController.m */; };
 		4758705C15B9E803005E9C02 /* LoadingScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4758705B15B9E803005E9C02 /* LoadingScreenViewController.m */; };
 		4758705F15BC6E53005E9C02 /* MemberData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4758705E15BC6E53005E9C02 /* MemberData.m */; };
@@ -41,6 +49,17 @@
 /* Begin PBXFileReference section */
 		4711E01715B75EA9005C463B /* WebsiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebsiteViewController.h; sourceTree = "<group>"; };
 		4711E01815B75EA9005C463B /* WebsiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebsiteViewController.m; sourceTree = "<group>"; };
+		473EC35A15C99E240035A8F6 /* noimage.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = noimage.jpeg; sourceTree = "<group>"; };
+		473EC35E15C9A0D10035A8F6 /* MGImageUtilitiesAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGImageUtilitiesAppDelegate.h; sourceTree = "<group>"; };
+		473EC35F15C9A0D10035A8F6 /* MGImageUtilitiesAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGImageUtilitiesAppDelegate.m; sourceTree = "<group>"; };
+		473EC36015C9A0D10035A8F6 /* UIImage+ProportionalFill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ProportionalFill.h"; sourceTree = "<group>"; };
+		473EC36115C9A0D10035A8F6 /* UIImage+ProportionalFill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ProportionalFill.m"; sourceTree = "<group>"; };
+		473EC36215C9A0D10035A8F6 /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
+		473EC36315C9A0D10035A8F6 /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
+		473EC36715C9AAD60035A8F6 /* noimage2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = noimage2.jpg; path = ../AFNetworking/noimage2.jpg; sourceTree = "<group>"; };
+		473EC36915C9B3840035A8F6 /* independent_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = independent_logo.png; sourceTree = "<group>"; };
+		473EC36A15C9B3840035A8F6 /* republican_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = republican_logo.png; sourceTree = "<group>"; };
+		473EC36B15C9B3850035A8F6 /* democrat_logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = democrat_logo.jpeg; sourceTree = "<group>"; };
 		47408EE215927D61005833C8 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
 		47408EE315927D61005833C8 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		4758705A15B9E803005E9C02 /* LoadingScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingScreenViewController.h; sourceTree = "<group>"; };
@@ -88,9 +107,9 @@
 		47D452E71590BF97007B8EB5 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		47D4534F15924756007B8EB5 /* MemberTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberTableViewController.h; sourceTree = "<group>"; };
 		47D4535015924756007B8EB5 /* MemberTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberTableViewController.m; sourceTree = "<group>"; };
-		47FD9C9C15B9B73700E7F3B2 /* button_red.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = button_red.jpeg; sourceTree = "<group>"; };
-		47FD9C9D15B9B73700E7F3B2 /* button_gray.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = button_gray.jpeg; sourceTree = "<group>"; };
-		47FD9C9E15B9B73700E7F3B2 /* button_blue.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = button_blue.jpeg; sourceTree = "<group>"; };
+		47FD9C9C15B9B73700E7F3B2 /* button_red.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = button_red.jpeg; path = ../button_red.jpeg; sourceTree = "<group>"; };
+		47FD9C9D15B9B73700E7F3B2 /* button_gray.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = button_gray.jpeg; path = ../button_gray.jpeg; sourceTree = "<group>"; };
+		47FD9C9E15B9B73700E7F3B2 /* button_blue.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = button_blue.jpeg; path = ../button_blue.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,12 +126,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		473EC35D15C99FB60035A8F6 /* MGImage */ = {
+			isa = PBXGroup;
+			children = (
+				473EC35E15C9A0D10035A8F6 /* MGImageUtilitiesAppDelegate.h */,
+				473EC35F15C9A0D10035A8F6 /* MGImageUtilitiesAppDelegate.m */,
+				473EC36015C9A0D10035A8F6 /* UIImage+ProportionalFill.h */,
+				473EC36115C9A0D10035A8F6 /* UIImage+ProportionalFill.m */,
+				473EC36215C9A0D10035A8F6 /* UIImage+Tint.h */,
+				473EC36315C9A0D10035A8F6 /* UIImage+Tint.m */,
+			);
+			name = MGImage;
+			sourceTree = "<group>";
+		};
 		47D452A31590B8ED007B8EB5 = {
 			isa = PBXGroup;
 			children = (
-				47FD9C9C15B9B73700E7F3B2 /* button_red.jpeg */,
-				47FD9C9D15B9B73700E7F3B2 /* button_gray.jpeg */,
-				47FD9C9E15B9B73700E7F3B2 /* button_blue.jpeg */,
+				473EC35D15C99FB60035A8F6 /* MGImage */,
 				47D452D21590BF97007B8EB5 /* AFNetworking */,
 				47D452B81590B8ED007B8EB5 /* CongressApp */,
 				47D452B11590B8ED007B8EB5 /* Frameworks */,
@@ -209,6 +239,14 @@
 		47FD9C9415B9B6A400E7F3B2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				473EC36915C9B3840035A8F6 /* independent_logo.png */,
+				473EC36A15C9B3840035A8F6 /* republican_logo.png */,
+				473EC36B15C9B3850035A8F6 /* democrat_logo.jpeg */,
+				473EC36715C9AAD60035A8F6 /* noimage2.jpg */,
+				47FD9C9C15B9B73700E7F3B2 /* button_red.jpeg */,
+				47FD9C9D15B9B73700E7F3B2 /* button_gray.jpeg */,
+				47FD9C9E15B9B73700E7F3B2 /* button_blue.jpeg */,
+				473EC35A15C99E240035A8F6 /* noimage.jpeg */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -270,6 +308,11 @@
 				47FD9C9F15B9B73700E7F3B2 /* button_red.jpeg in Resources */,
 				47FD9CA015B9B73700E7F3B2 /* button_gray.jpeg in Resources */,
 				47FD9CA115B9B73700E7F3B2 /* button_blue.jpeg in Resources */,
+				473EC35B15C99E240035A8F6 /* noimage.jpeg in Resources */,
+				473EC36815C9AAD60035A8F6 /* noimage2.jpg in Resources */,
+				473EC36C15C9B3850035A8F6 /* independent_logo.png in Resources */,
+				473EC36D15C9B3850035A8F6 /* republican_logo.png in Resources */,
+				473EC36E15C9B3850035A8F6 /* democrat_logo.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +343,9 @@
 				4711E01915B75EAA005C463B /* WebsiteViewController.m in Sources */,
 				4758705C15B9E803005E9C02 /* LoadingScreenViewController.m in Sources */,
 				4758705F15BC6E53005E9C02 /* MemberData.m in Sources */,
+				473EC36415C9A0D10035A8F6 /* MGImageUtilitiesAppDelegate.m in Sources */,
+				473EC36515C9A0D10035A8F6 /* UIImage+ProportionalFill.m in Sources */,
+				473EC36615C9A0D10035A8F6 /* UIImage+Tint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,6 +29,7 @@
 
 @synthesize activityIndicatorView = _activityIndicatorView;
 @synthesize contactTableView = _contactTableView;
+@synthesize scrollView = _scrollView;
 
 
 
@@ -75,7 +76,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
     //NSLog(@"%@", self.memberID);
     self.contactCategories = [[NSMutableArray alloc]initWithObjects: @"phone", @"url",@"email_link",@"twitter_id",@"youtube_id", nil ];
     self.contactTableView.separatorColor = [UIColor clearColor];
@@ -198,12 +198,33 @@
     [self.state setText:[NSString stringWithFormat:@"State: %@", [self.member valueForKey:@"state"]]];
     
     //Profile Image
+    
+    //DO ASYNCH
+    
+    NSString *placeholderImg = @"";
+    if([party isEqualToString:@"D"])
+    {
+        placeholderImg = @"democrat_logo.jpeg";
+        
+    }
+    else if([party isEqualToString:@"R"])
+    {
+        placeholderImg = @"republican_logo.png";
+    }
+    else //if([party isEqualToString:@"i"])
+    {
+        placeholderImg = @"independent_logo.png";
+    }
+    
     NSString *img = [NSString stringWithFormat:[self.member valueForKey:@"img_url_large"]];
     NSString *encodedImg = [img stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSURL *url = [NSURL URLWithString:encodedImg];
-    NSData *imgData = [NSData dataWithContentsOfURL:url];
+    
+    [self.profileImage setImageWithURL:[NSURL URLWithString:encodedImg] placeholderImage:[UIImage imageNamed:placeholderImg] size:self.profileImage.frame.size];
+    
+    
+    //NSURL *url = [NSURL URLWithString:encodedImg];
+    //NSData *imgData = [NSData dataWithContentsOfURL:url];
 
-    self.profileImage.image = [UIImage imageWithData:imgData];
     
     
 }
@@ -329,13 +350,11 @@
     [self setState:nil];
     [self setChamber:nil];
     [self setNavBar:nil];
+    [self setScrollView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
+
 
 @end

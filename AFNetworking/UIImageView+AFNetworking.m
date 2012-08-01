@@ -25,6 +25,8 @@
 
 #if __IPHONE_OS_VERSION_MIN_REQUIRED
 #import "UIImageView+AFNetworking.h"
+#import "UIImage+ProportionalFill.h"
+
 
 @interface AFImageCache : NSCache
 - (UIImage *)cachedImageForRequest:(NSURLRequest *)request;
@@ -80,21 +82,23 @@ static char kAFImageRequestOperationObjectKey;
 #pragma mark -
 
 - (void)setImageWithURL:(NSURL *)url {
-    [self setImageWithURL:url placeholderImage:nil];
+    [self setImageWithURL:url placeholderImage:nil size:CGSizeMake(0, 0)];
 }
 
 - (void)setImageWithURL:(NSURL *)url 
        placeholderImage:(UIImage *)placeholderImage
+                   size:(CGSize)size
 {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0];
     [request setHTTPShouldHandleCookies:NO];
     [request setHTTPShouldUsePipelining:YES];
     
-    [self setImageWithURLRequest:request placeholderImage:placeholderImage success:nil failure:nil];
+    [self setImageWithURLRequest:request placeholderImage:placeholderImage size:size success:nil failure:nil];
 }
 
 - (void)setImageWithURLRequest:(NSURLRequest *)urlRequest 
-              placeholderImage:(UIImage *)placeholderImage 
+              placeholderImage:(UIImage *)placeholderImage
+                          size:(CGSize) size
                        success:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image))success
                        failure:(void (^)(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error))failure
 {
@@ -103,6 +107,7 @@ static char kAFImageRequestOperationObjectKey;
     UIImage *cachedImage = [[[self class] af_sharedImageCache] cachedImageForRequest:urlRequest];
     if (cachedImage) {
         self.image = cachedImage;
+        self.image = [self.image imageCroppedToFitSize:size];
         self.af_imageRequestOperation = nil;
         
         if (success) {
@@ -110,11 +115,13 @@ static char kAFImageRequestOperationObjectKey;
         }
     } else {
         self.image = placeholderImage;
+        self.image = [self.image imageCroppedToFitSize:size];
         
         AFImageRequestOperation *requestOperation = [[[AFImageRequestOperation alloc] initWithRequest:urlRequest] autorelease];
         [requestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
             if ([[urlRequest URL] isEqual:[[self.af_imageRequestOperation request] URL]]) {
                 self.image = responseObject;
+                self.image = [self.image imageCroppedToFitSize:size];
                 self.af_imageRequestOperation = nil;
             }
 
