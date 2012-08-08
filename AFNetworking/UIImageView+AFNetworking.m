@@ -81,6 +81,8 @@ static char kAFImageRequestOperationObjectKey;
 
 #pragma mark -
 
+/*  ADDED SIZE PARAMETER FOR THIS PARTICULAR APP   */
+
 - (void)setImageWithURL:(NSURL *)url {
     [self setImageWithURL:url placeholderImage:nil size:CGSizeMake(0, 0)];
 }

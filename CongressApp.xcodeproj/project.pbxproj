@@ -13,13 +13,24 @@
 		473EC36515C9A0D10035A8F6 /* UIImage+ProportionalFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 473EC36115C9A0D10035A8F6 /* UIImage+ProportionalFill.m */; };
 		473EC36615C9A0D10035A8F6 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 473EC36315C9A0D10035A8F6 /* UIImage+Tint.m */; };
 		473EC36815C9AAD60035A8F6 /* noimage2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 473EC36715C9AAD60035A8F6 /* noimage2.jpg */; };
-		473EC36C15C9B3850035A8F6 /* independent_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 473EC36915C9B3840035A8F6 /* independent_logo.png */; };
-		473EC36D15C9B3850035A8F6 /* republican_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 473EC36A15C9B3840035A8F6 /* republican_logo.png */; };
-		473EC36E15C9B3850035A8F6 /* democrat_logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 473EC36B15C9B3850035A8F6 /* democrat_logo.jpeg */; };
+		473EC37215C9C3DD0035A8F6 /* democrat_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 473EC36F15C9C3DC0035A8F6 /* democrat_logo.png */; };
+		473EC37315C9C3DD0035A8F6 /* republican_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 473EC37015C9C3DC0035A8F6 /* republican_logo.png */; };
+		473EC37415C9C3DD0035A8F6 /* independent_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 473EC37115C9C3DC0035A8F6 /* independent_logo.png */; };
 		47408EE415927D61005833C8 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47408EE315927D61005833C8 /* CategoryViewController.m */; };
 		4758705C15B9E803005E9C02 /* LoadingScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4758705B15B9E803005E9C02 /* LoadingScreenViewController.m */; };
 		4758705F15BC6E53005E9C02 /* MemberData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4758705E15BC6E53005E9C02 /* MemberData.m */; };
 		478CDE4315A0FE3F00BFD903 /* PhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 478CDE4215A0FE3F00BFD903 /* PhoneNumberFormatter.m */; };
+		47B4D07815D2E78500766EA8 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B4D06E15D2E78500766EA8 /* AddressBook.framework */; };
+		47B4D07915D2E78500766EA8 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B4D06F15D2E78500766EA8 /* AddressBookUI.framework */; };
+		47B4D07A15D2E78500766EA8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B4D07015D2E78500766EA8 /* AudioToolbox.framework */; };
+		47B4D07B15D2E78500766EA8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B4D07115D2E78500766EA8 /* AVFoundation.framework */; };
+		47B4D07C15D2E78500766EA8 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B4D07215D2E78500766EA8 /* CoreMotion.framework */; };
+		47B4D07D15D2E78500766EA8 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B4D07315D2E78500766EA8 /* EventKit.framework */; };
+		47B4D07E15D2E78500766EA8 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B4D07415D2E78500766EA8 /* MediaPlayer.framework */; };
+		47B4D07F15D2E78500766EA8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B4D07515D2E78500766EA8 /* MessageUI.framework */; };
+		47B4D08015D2E78500766EA8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B4D07615D2E78500766EA8 /* QuartzCore.framework */; };
+		47B4D08115D2E78500766EA8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B4D07715D2E78500766EA8 /* SystemConfiguration.framework */; };
+		47B4D08B15D2EE7C00766EA8 /* libMobclix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47B4D08315D2EE7C00766EA8 /* libMobclix.a */; };
 		47C6244E15941B1E009A5690 /* MemberProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C6244D15941B1E009A5690 /* MemberProfileViewController.m */; };
 		47D452B31590B8ED007B8EB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D452B21590B8ED007B8EB5 /* UIKit.framework */; };
 		47D452B51590B8ED007B8EB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D452B41590B8ED007B8EB5 /* Foundation.framework */; };
@@ -57,9 +68,9 @@
 		473EC36215C9A0D10035A8F6 /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
 		473EC36315C9A0D10035A8F6 /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
 		473EC36715C9AAD60035A8F6 /* noimage2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = noimage2.jpg; path = ../AFNetworking/noimage2.jpg; sourceTree = "<group>"; };
-		473EC36915C9B3840035A8F6 /* independent_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = independent_logo.png; sourceTree = "<group>"; };
-		473EC36A15C9B3840035A8F6 /* republican_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = republican_logo.png; sourceTree = "<group>"; };
-		473EC36B15C9B3850035A8F6 /* democrat_logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = democrat_logo.jpeg; sourceTree = "<group>"; };
+		473EC36F15C9C3DC0035A8F6 /* democrat_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = democrat_logo.png; path = ../democrat_logo.png; sourceTree = "<group>"; };
+		473EC37015C9C3DC0035A8F6 /* republican_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = republican_logo.png; path = ../republican_logo.png; sourceTree = "<group>"; };
+		473EC37115C9C3DC0035A8F6 /* independent_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = independent_logo.png; path = ../independent_logo.png; sourceTree = "<group>"; };
 		47408EE215927D61005833C8 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
 		47408EE315927D61005833C8 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		4758705A15B9E803005E9C02 /* LoadingScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingScreenViewController.h; sourceTree = "<group>"; };
@@ -68,6 +79,24 @@
 		4758705E15BC6E53005E9C02 /* MemberData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberData.m; sourceTree = "<group>"; };
 		478CDE4115A0FE3F00BFD903 /* PhoneNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneNumberFormatter.h; sourceTree = "<group>"; };
 		478CDE4215A0FE3F00BFD903 /* PhoneNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneNumberFormatter.m; sourceTree = "<group>"; };
+		47B4D06E15D2E78500766EA8 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		47B4D06F15D2E78500766EA8 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		47B4D07015D2E78500766EA8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		47B4D07115D2E78500766EA8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		47B4D07215D2E78500766EA8 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		47B4D07315D2E78500766EA8 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		47B4D07415D2E78500766EA8 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		47B4D07515D2E78500766EA8 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		47B4D07615D2E78500766EA8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		47B4D07715D2E78500766EA8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		47B4D08315D2EE7C00766EA8 /* libMobclix.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobclix.a; sourceTree = "<group>"; };
+		47B4D08415D2EE7C00766EA8 /* MCBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCBrowserViewController.h; sourceTree = "<group>"; };
+		47B4D08515D2EE7C00766EA8 /* Mobclix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mobclix.h; sourceTree = "<group>"; };
+		47B4D08615D2EE7C00766EA8 /* MobclixAds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobclixAds.h; sourceTree = "<group>"; };
+		47B4D08715D2EE7C00766EA8 /* MobclixAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobclixAdView.h; sourceTree = "<group>"; };
+		47B4D08815D2EE7C00766EA8 /* MobclixDemographics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobclixDemographics.h; sourceTree = "<group>"; };
+		47B4D08915D2EE7C00766EA8 /* MobclixFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobclixFeedback.h; sourceTree = "<group>"; };
+		47B4D08A15D2EE7C00766EA8 /* MobclixFullScreenAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobclixFullScreenAdViewController.h; sourceTree = "<group>"; };
 		47C6244C15941B1E009A5690 /* MemberProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberProfileViewController.h; sourceTree = "<group>"; };
 		47C6244D15941B1E009A5690 /* MemberProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberProfileViewController.m; sourceTree = "<group>"; };
 		47D452AE1590B8ED007B8EB5 /* CongressApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CongressApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,9 +146,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47B4D07815D2E78500766EA8 /* AddressBook.framework in Frameworks */,
+				47B4D07915D2E78500766EA8 /* AddressBookUI.framework in Frameworks */,
+				47B4D07A15D2E78500766EA8 /* AudioToolbox.framework in Frameworks */,
+				47B4D07B15D2E78500766EA8 /* AVFoundation.framework in Frameworks */,
+				47B4D07C15D2E78500766EA8 /* CoreMotion.framework in Frameworks */,
+				47B4D07D15D2E78500766EA8 /* EventKit.framework in Frameworks */,
+				47B4D07E15D2E78500766EA8 /* MediaPlayer.framework in Frameworks */,
+				47B4D07F15D2E78500766EA8 /* MessageUI.framework in Frameworks */,
+				47B4D08015D2E78500766EA8 /* QuartzCore.framework in Frameworks */,
+				47B4D08115D2E78500766EA8 /* SystemConfiguration.framework in Frameworks */,
 				47D452B31590B8ED007B8EB5 /* UIKit.framework in Frameworks */,
 				47D452B51590B8ED007B8EB5 /* Foundation.framework in Frameworks */,
 				47D452B71590B8ED007B8EB5 /* CoreGraphics.framework in Frameworks */,
+				47B4D08B15D2EE7C00766EA8 /* libMobclix.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,9 +179,26 @@
 			name = MGImage;
 			sourceTree = "<group>";
 		};
+		47B4D08215D2EE7C00766EA8 /* Mobclix SDK */ = {
+			isa = PBXGroup;
+			children = (
+				47B4D08315D2EE7C00766EA8 /* libMobclix.a */,
+				47B4D08415D2EE7C00766EA8 /* MCBrowserViewController.h */,
+				47B4D08515D2EE7C00766EA8 /* Mobclix.h */,
+				47B4D08615D2EE7C00766EA8 /* MobclixAds.h */,
+				47B4D08715D2EE7C00766EA8 /* MobclixAdView.h */,
+				47B4D08815D2EE7C00766EA8 /* MobclixDemographics.h */,
+				47B4D08915D2EE7C00766EA8 /* MobclixFeedback.h */,
+				47B4D08A15D2EE7C00766EA8 /* MobclixFullScreenAdViewController.h */,
+			);
+			name = "Mobclix SDK";
+			path = "../../../Downloads/Mobclix SDK 5.0.2/Mobclix SDK";
+			sourceTree = "<group>";
+		};
 		47D452A31590B8ED007B8EB5 = {
 			isa = PBXGroup;
 			children = (
+				47B4D08215D2EE7C00766EA8 /* Mobclix SDK */,
 				473EC35D15C99FB60035A8F6 /* MGImage */,
 				47D452D21590BF97007B8EB5 /* AFNetworking */,
 				47D452B81590B8ED007B8EB5 /* CongressApp */,
@@ -161,6 +218,16 @@
 		47D452B11590B8ED007B8EB5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				47B4D06E15D2E78500766EA8 /* AddressBook.framework */,
+				47B4D06F15D2E78500766EA8 /* AddressBookUI.framework */,
+				47B4D07015D2E78500766EA8 /* AudioToolbox.framework */,
+				47B4D07115D2E78500766EA8 /* AVFoundation.framework */,
+				47B4D07215D2E78500766EA8 /* CoreMotion.framework */,
+				47B4D07315D2E78500766EA8 /* EventKit.framework */,
+				47B4D07415D2E78500766EA8 /* MediaPlayer.framework */,
+				47B4D07515D2E78500766EA8 /* MessageUI.framework */,
+				47B4D07615D2E78500766EA8 /* QuartzCore.framework */,
+				47B4D07715D2E78500766EA8 /* SystemConfiguration.framework */,
 				47D452B21590B8ED007B8EB5 /* UIKit.framework */,
 				47D452B41590B8ED007B8EB5 /* Foundation.framework */,
 				47D452B61590B8ED007B8EB5 /* CoreGraphics.framework */,
@@ -239,9 +306,9 @@
 		47FD9C9415B9B6A400E7F3B2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				473EC36915C9B3840035A8F6 /* independent_logo.png */,
-				473EC36A15C9B3840035A8F6 /* republican_logo.png */,
-				473EC36B15C9B3850035A8F6 /* democrat_logo.jpeg */,
+				473EC36F15C9C3DC0035A8F6 /* democrat_logo.png */,
+				473EC37015C9C3DC0035A8F6 /* republican_logo.png */,
+				473EC37115C9C3DC0035A8F6 /* independent_logo.png */,
 				473EC36715C9AAD60035A8F6 /* noimage2.jpg */,
 				47FD9C9C15B9B73700E7F3B2 /* button_red.jpeg */,
 				47FD9C9D15B9B73700E7F3B2 /* button_gray.jpeg */,
@@ -310,9 +377,9 @@
 				47FD9CA115B9B73700E7F3B2 /* button_blue.jpeg in Resources */,
 				473EC35B15C99E240035A8F6 /* noimage.jpeg in Resources */,
 				473EC36815C9AAD60035A8F6 /* noimage2.jpg in Resources */,
-				473EC36C15C9B3850035A8F6 /* independent_logo.png in Resources */,
-				473EC36D15C9B3850035A8F6 /* republican_logo.png in Resources */,
-				473EC36E15C9B3850035A8F6 /* democrat_logo.jpeg in Resources */,
+				473EC37215C9C3DD0035A8F6 /* democrat_logo.png in Resources */,
+				473EC37315C9C3DD0035A8F6 /* republican_logo.png in Resources */,
+				473EC37415C9C3DD0035A8F6 /* independent_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +499,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CongressApp/CongressApp-Prefix.pch";
 				INFOPLIST_FILE = "CongressApp/CongressApp-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Mobclix SDK\"",
+					"\"$(SRCROOT)/../../../Downloads/Mobclix SDK 5.0.2/Mobclix SDK\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -443,6 +516,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CongressApp/CongressApp-Prefix.pch";
 				INFOPLIST_FILE = "CongressApp/CongressApp-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Mobclix SDK\"",
+					"\"$(SRCROOT)/../../../Downloads/Mobclix SDK 5.0.2/Mobclix SDK\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSMutableArray *stateArray;
 @property (nonatomic, strong) NSMutableArray *statesMembers;
 @property (nonatomic, strong) NSMutableArray *fullStateNames;
+@property (nonatomic, retain) MobclixAdView *adView;
 @end
 
 
@@ -30,6 +31,8 @@
 @synthesize stateArray = _stateArray;
 @synthesize statesMembers = _statesMembers;
 @synthesize fullStateNames = _fullStateNames;
+
+@synthesize adView = _adView;
 
 
 
@@ -51,6 +54,14 @@
 {
     [super viewDidLoad];
     
+    if([self.chamber isEqualToString:@"house"]){
+        self.navBar.title = @"House of Representatives";
+    }
+    else{
+        self.navBar.title = @"Senate";
+        
+    }
+    
     // Setting Up Table View
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStylePlain];
     self.tableView.dataSource = self;
@@ -66,6 +77,7 @@
     [self.view addSubview:self.activityIndicatorView];
     [self.activityIndicatorView startAnimating];
     
+    
     // Initializing Data Source
     self.members = [[NSArray alloc] init];
     self.stateArray = [[NSMutableArray alloc] init];
@@ -75,13 +87,10 @@
     [self initStates];
     [self getMembersByState];
     
-    if([self.chamber isEqualToString:@"house"]){
-        self.navBar.title = @"House of Representatives";
-    }
-    else{
-        self.navBar.title = @"Senate";
-
-    }
+    //initialize ads
+    self.adView = [[MobclixAdViewiPhone_320x50 alloc]initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 50.0f)] ;
+    [self.view addSubview:self.adView];
+    
     
     
    
@@ -132,6 +141,7 @@
     }
 
 }
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
     return [self.statesMembers count];

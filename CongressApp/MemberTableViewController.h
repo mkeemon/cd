@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MobclixAdView.h"
 
 @interface MemberTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
     UITableView *_tableView;
     UIActivityIndicatorView *_activityIndicatorView;
     NSArray *_members;
+    
 }
 
 @property (nonatomic, retain) UITableView *tableView;

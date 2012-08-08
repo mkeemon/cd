@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Mobclix.h"
+
 
 @interface CongressDirectoryAppDelegate : UIResponder <UIApplicationDelegate>
 

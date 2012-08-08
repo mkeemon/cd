@@ -15,6 +15,7 @@
 - (BOOL)application:(UIApplication *)applicationdidFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [Mobclix startWithApplicationId:@"A1A53901-4390-4034-99B8-6CA931214AF5"];
     return YES;
 }
 							
