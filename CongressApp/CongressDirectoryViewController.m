@@ -75,7 +75,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
     //[self apiRequest];
     
-    self.adView = [[MobclixAdViewiPhone_320x50 alloc]initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 50.0f)];
+    self.adView = [[MobclixAdViewiPhone_320x50 alloc]initWithFrame:CGRectMake(0.0f, self.view.frame.size.height-50.0f, 320.0f, 50.0f)];
+    [self.adView setBackgroundColor:[UIColor blueColor]];
     [self.view addSubview:self.adView];
     
 }

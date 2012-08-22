@@ -43,6 +43,13 @@
         
         NSArray *members = [self.members valueForKey:state];
         [self.statesMembers addObject:members];
+        /*
+        if([self.chamber isEqualToString:@"house"] && [members count] >= 10)
+        {
+            
+            [self.statesMembers addObject:@"advertisment"];
+        }
+        */
     }
     [self.activityIndicatorView stopAnimating];
     [self.tableView setHidden:NO];
@@ -87,14 +94,7 @@
     [self initStates];
     [self getMembersByState];
     
-    //initialize ads
-    self.adView = [[MobclixAdViewiPhone_320x50 alloc]initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 50.0f)] ;
-    [self.view addSubview:self.adView];
-    
-    
-    
-   
-    
+
 }
 
 
@@ -131,8 +131,7 @@
     
     if(self.statesMembers && self.statesMembers.count)
     {
-        NSArray *members= [self.statesMembers objectAtIndex:section];
-        
+        NSArray *members= [self.statesMembers objectAtIndex:section];        
         return [members count]; 
     }
     else
@@ -143,8 +142,8 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
     return [self.statesMembers count];
+    
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -185,7 +184,7 @@
     cell.textLabel.textColor = [UIColor whiteColor];
    
     
-
+    
 }
 
 
@@ -208,7 +207,6 @@
     NSString *l_n = [member objectForKey:@"last_name"];
     NSString *m_n = [member objectForKey:@"middle_name"];
 
-    
     
     
     
